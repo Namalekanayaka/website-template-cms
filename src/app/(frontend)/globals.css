@@ -12,6 +12,14 @@
     font-size: unset;
     font-weight: unset;
   }
+  /*@layer base {
+    h1 {
+      font-size: 200px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-weight: 700;
+      color: black;
+    }
+  }*/
 
   :root {
     --background: 0 0% 100%;

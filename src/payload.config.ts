@@ -21,6 +21,7 @@ const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
 export default buildConfig({
+  secret: process.env.PAYLOAD_SECRET,
   admin: {
     components: {
       // The `BeforeLogin` component renders a message that you see while logging into your admin panel.
@@ -71,7 +72,7 @@ export default buildConfig({
     ...plugins,
     // storage-adapter-placeholder
   ],
-  secret: process.env.PAYLOAD_SECRET,
+
   sharp,
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
