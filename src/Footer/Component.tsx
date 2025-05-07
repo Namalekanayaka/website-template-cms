@@ -21,13 +21,13 @@ export async function Footer() {
           <div className="space-y-4">
             <Link className="flex items-center transition-transform hover:scale-105" href="/">
               <Logo />
-              <span className="ml-2 text-xl font-semibold text-white">YourBrand</span>
+              <span className="ml-2 text-xl font-semibold text-white">digital</span>
             </Link>
             <p className="text-sm text-gray-400">
               Building amazing digital experiences that matter.
             </p>
             <p className="text-xs text-gray-500">
-              © {new Date().getFullYear()} Your Company. All rights reserved.
+              © {new Date().getFullYear()} . All rights reserved.
             </p>
           </div>
 
