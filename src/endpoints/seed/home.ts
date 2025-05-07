@@ -23,7 +23,7 @@ export const home: (args: HomeArgs) => RequiredDataFromCollectionSlug<'pages'> =
             label: 'All posts',
             url: '/posts',
             className:
-              'bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-md transition-colors duration-200 shadow-lg inline-flex items-center',
+              'bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-md transition-all duration-300 shadow-lg inline-flex items-center hover:translate-y-[-2px]',
           },
         },
         {
@@ -33,7 +33,7 @@ export const home: (args: HomeArgs) => RequiredDataFromCollectionSlug<'pages'> =
             label: 'Contact',
             url: '/contact',
             className:
-              'border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-medium py-2 px-6 rounded-md transition-colors duration-200 inline-flex items-center',
+              'border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-medium py-2 px-6 rounded-md transition-all duration-300 inline-flex items-center hover:shadow-md',
           },
         },
       ],
@@ -276,7 +276,7 @@ export const home: (args: HomeArgs) => RequiredDataFromCollectionSlug<'pages'> =
             },
             size: 'oneThird',
             className:
-              'p-6 rounded-lg bg-white dark:bg-slate-800 shadow-sm hover:shadow-md transition-shadow duration-200',
+              'p-6 rounded-lg bg-white dark:bg-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group relative overflow-hidden border border-transparent hover:border-blue-100 dark:hover:border-blue-900',
           },
           {
             enableLink: false,
@@ -332,7 +332,7 @@ export const home: (args: HomeArgs) => RequiredDataFromCollectionSlug<'pages'> =
             },
             size: 'oneThird',
             className:
-              'p-6 rounded-lg bg-white dark:bg-slate-800 shadow-sm hover:shadow-md transition-shadow duration-200',
+              'p-6 rounded-lg bg-white dark:bg-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group relative overflow-hidden border border-transparent hover:border-blue-100 dark:hover:border-blue-900',
           },
           {
             enableLink: false,
@@ -388,7 +388,7 @@ export const home: (args: HomeArgs) => RequiredDataFromCollectionSlug<'pages'> =
             },
             size: 'oneThird',
             className:
-              'p-6 rounded-lg bg-white dark:bg-slate-800 shadow-sm hover:shadow-md transition-shadow duration-200',
+              'p-6 rounded-lg bg-white dark:bg-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group relative overflow-hidden border border-transparent hover:border-blue-100 dark:hover:border-blue-900',
           },
           {
             enableLink: false,
@@ -476,7 +476,7 @@ export const home: (args: HomeArgs) => RequiredDataFromCollectionSlug<'pages'> =
             },
             size: 'oneThird',
             className:
-              'p-6 rounded-lg bg-white dark:bg-slate-800 shadow-sm hover:shadow-md transition-shadow duration-200',
+              'p-6 rounded-lg bg-white dark:bg-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group relative overflow-hidden border border-transparent hover:border-blue-100 dark:hover:border-blue-900',
           },
           {
             enableLink: false,
@@ -532,7 +532,7 @@ export const home: (args: HomeArgs) => RequiredDataFromCollectionSlug<'pages'> =
             },
             size: 'oneThird',
             className:
-              'p-6 rounded-lg bg-white dark:bg-slate-800 shadow-sm hover:shadow-md transition-shadow duration-200',
+              'p-6 rounded-lg bg-white dark:bg-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group relative overflow-hidden border border-transparent hover:border-blue-100 dark:hover:border-blue-900',
           },
         ],
         className: 'py-16 container mx-auto px-4 grid gap-6',
@@ -602,14 +602,16 @@ export const home: (args: HomeArgs) => RequiredDataFromCollectionSlug<'pages'> =
         relationTo: 'posts',
         className: 'py-16 container mx-auto px-4',
         cardClassName:
-          'bg-white dark:bg-slate-800 shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-200',
-        cardImageWrapperClassName: 'aspect-video overflow-hidden',
-        cardTitleClassName: 'font-semibold text-xl text-slate-900 dark:text-white mt-4 px-6',
+          'bg-white dark:bg-slate-800 shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group',
+        cardImageWrapperClassName:
+          'aspect-video overflow-hidden group-hover:opacity-90 transition-opacity',
+        cardTitleClassName:
+          'font-semibold text-xl text-slate-900 dark:text-white mt-4 px-6 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors',
         cardBodyClassName: 'px-6 py-4 text-slate-600 dark:text-slate-400',
         paginationClassName: 'flex justify-center mt-8 gap-2',
         paginationButtonClassName:
-          'px-4 py-2 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors',
-        paginationActiveClassName: 'px-4 py-2 bg-blue-600 text-white rounded',
+          'px-4 py-2 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors hover:shadow-md',
+        paginationActiveClassName: 'px-4 py-2 bg-blue-600 text-white rounded shadow-md',
       },
       {
         blockName: 'CTA',
@@ -622,7 +624,7 @@ export const home: (args: HomeArgs) => RequiredDataFromCollectionSlug<'pages'> =
               label: 'All posts',
               url: '/posts',
               className:
-                'bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-md transition-colors duration-200 shadow-lg inline-flex items-center',
+                'bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-md transition-all duration-300 shadow-lg inline-flex items-center hover:translate-y-[-2px]',
             },
           },
         ],
