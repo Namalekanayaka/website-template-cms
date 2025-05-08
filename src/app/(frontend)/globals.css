@@ -12,108 +12,49 @@
     font-size: unset;
     font-weight: unset;
   }
-  /*@layer base {
+  @layer base {
     h1 {
-      font-size: 200px;
+      font-size: 500px;
       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
       font-weight: 700;
       color: black;
     }
-  }*/
+  }
 
   :root {
-    /* Original color variables */
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
-    /* Enhanced card variables with modular HSL components */
-    --card-hue: 240;
-    --card-saturation: 5%;
-    --card-lightness: 96%;
-    --card: hsl(var(--card-hue) var(--card-saturation) var(--card-lightness) / 1);
-    --card-foreground-hue: 222.2;
-    --card-foreground-saturation: 84%;
-    --card-foreground-lightness: 4.9%;
-    --card-foreground: hsl(
-      var(--card-foreground-hue) var(--card-foreground-saturation)
-        var(--card-foreground-lightness) / 1
-    );
+    --card: 240 5% 96%;
+    --card-foreground: 222.2 84% 4.9%;
 
-    /* Derived shades for card (hover, focus) */
-    --card-light: hsl(
-      var(--card-hue) calc(var(--card-saturation) * 0.8) calc(var(--card-lightness) + 2%) / 1
-    );
-    --card-dark: hsl(
-      var(--card-hue) calc(var(--card-saturation) * 1.2) calc(var(--card-lightness) - 4%) / 1
-    );
-
-    /* Original variables continued */
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
+
     --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
+
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
+
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
+
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
+
     --border: 240 6% 80%;
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
+
     --radius: 0.2rem;
+
     --success: 196 52% 74%;
     --warning: 34 89% 85%;
     --error: 10 100% 86%;
-
-    /* Dark mode support for card */
-    @media (prefers-color-scheme: dark) {
-      --card-lightness: 20%;
-      --card-saturation: 10%;
-      --card-foreground-lightness: 95%;
-    }
-
-    /* High contrast mode for accessibility */
-    @media (prefers-contrast: high) {
-      --card: hsl(var(--card-hue) 10% 98% / 1);
-      --card-foreground: hsl(var(--card-foreground-hue) 90% 2% / 1);
-    }
-  }
-
-  /* Example usage with transitions and interactivity */
-  .card {
-    background: var(--card);
-    color: var(--card-foreground);
-    padding: 1rem;
-    border-radius: var(--radius);
-    transition:
-      background 0.3s ease,
-      transform 0.2s ease,
-      box-shadow 0.3s ease;
-    box-shadow: 0 4px 6px -1px hsl(0 0% 0% / 0.1);
-
-    /* Hover effect */
-    &:hover {
-      background: var(--card-light);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 12px -2px hsl(0 0% 0% / 0.15);
-    }
-
-    /* Focus state for accessibility */
-    &:focus-within {
-      background: var(--card-dark);
-      outline: 2px solid hsl(var(--card-hue) 50% 50%);
-      outline-offset: 2px;
-    }
-  }
-
-  /* Dynamic color adjustment for accent variation */
-  .card--accent {
-    --card-hue: 260; /* Override hue for a different accent */
-    background: var(--card);
-    color: var(--card-foreground);
   }
 
   [data-theme='dark'] {
