@@ -125,7 +125,6 @@ export const Card: React.FC<{
         </div>
       </div>
 
-      {/* Interactive overlay corner accent */}
       <div
         className={`absolute bottom-0 right-0 w-16 h-16 rounded-tl-2xl bg-gradient-to-br from-blue-500/20 to-purple-500/20 backdrop-blur-sm transition-all duration-500 ease-in-out ${isHovered ? 'opacity-100' : 'opacity-0'}`}
       ></div>
