@@ -21,7 +21,7 @@ export const PostHero: React.FC<{ post: Post; links?: Array<{ link: any }> }> = 
         {heroImage && typeof heroImage !== 'string' && (
           <Media fill priority imgClassName="object-cover" resource={heroImage} />
         )}
-        <div className="absolute pointer-events-none inset-0 bg-gradient-to-t from-white to-transparent" />
+        <div className="absolute pointer-events-none inset-0 bg-gradient-to-t from-black to-transparent" />
       </div>
 
       {/* Content Container */}
